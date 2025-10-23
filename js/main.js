@@ -25,20 +25,26 @@ gsap.from('#window2', {
 })
 
 
-/*gsap.from('#window2', {
-    scrollTrigger:{
-        trigger:"#section2",
-        markers: true,
-        start: 'top 80%',
-        end: 'top 20%',
-        toggleActions: 'play none reverse reset',
-        scrub: 1,
-    },
-    opacity: 0,
-    opacity: 100,
-})*/
 
 /** GSAP Animation - Section 3 Time line */
+
+
+
+const sections = gsap.utils.toArray("#section3 > div");
+
+gsap.to(sections, {
+  xPercent: -300,
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#section3",
+    pin: true,
+    scrub: 1,
+    snap: 1 / (sections.length - 1),
+    end: "+=2000"
+  }
+});
+
+
 
 let tl = gsap.timeline({
     //repeat: -1,
@@ -60,9 +66,20 @@ tl.from('.animeSec2A', {x:'-100vw',})
 .from('.animeSec2C', {x:'-100vw',})
 
 
-/** GSAP Draggable */
+/** GSAP Draggable section5*/
 
-Draggable.create("#section5__image", {
+Draggable.create(".characters", {
+    type: "x,y",
+    bounds: "#section5",
+    cursor: 'grab',
+})
+
+
+
+
+
+
+/*Draggable.create("#section5__image", {
     type: "x,y",
     bounds: "#section4",
     cursor: "grab",
@@ -72,10 +89,10 @@ Draggable.create("#section5__image", {
             width: '250px',
         })
         
-    /*onDragEnd: function(){
+    onDragEnd: function(){
         gsap.to("#section5__image",
              width: '150px',
         )
-    }*/
+    }
     },
-})
+})*/
