@@ -1,0 +1,168 @@
+/* General*/
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+}
+
+/* ----- Fonts ------ */
+
+h1{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h2{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+p{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.description{
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* ------ (Home) Page Design ------ */
+
+#cometeSec{
+    align-self: start;
+}
+
+#comete{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    background-image: url(assets/image/hextech.jpeg);
+    background-size: cover;
+}
+
+body{
+    width:100%;
+    min-height: 100%;
+}
+
+#section1{
+    width: 100vw;
+    min-height: 100vh;
+    background-image: url(assets/image/ArcaneBackground.jpeg);
+    background-size: cover;
+
+    padding-top: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.imageG{
+    width: 20%;
+    align-self: self-start;
+    /*filter: drop-shadow(10 10 10 black);*/
+}
+
+#cait2{
+    height: 100%;
+    width: 100%;
+}
+
+.textIntro{
+    width: 60%;
+    background-color: rgba(137, 43, 226, 0.5);
+    color:antiquewhite
+}
+
+h1, p{
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+p{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+
+    padding: 10px;
+}
+
+.textSec2{
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    background-color: blue;
+    
+    width: 35%;
+}
+
+h3{
+    font-size: 25px;
+}
+
+.description{
+    font-size: 20px;
+}
+
+.imageD{
+    width: 20%;
+    align-self: self-end;
+}
+
+#cait{
+  height: 100%;
+  width: 80%;
+}
+
+#section2{
+    width: 100vw;
+    min-height: 50vw;
+    background-image: url(assets/image/CaitHouse.png);
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Cait3{
+    height: 100%;
+    width: 94%;
+}
+
+.CaitIs{
+    align-self: self-start;
+}
+
+#section3{
+    width: 100vw;
+    min-height: 50vw;
+    background-color: rgb(64, 102, 26);
+}
+
+#section4{
+    width: 100vw;
+    min-height: 50vw;
+    background-color: rgb(102, 131, 73);
+}
+
+#section5{
+    width: 100vw;
+    min-height: 50vw;
+    background-color: rgb(20, 57, 166);
+}
+
+#depositeZone{
+    width: 250px;
+    height: 250px;
+}
+/* ------- Responsive ------- */
+
+/* ------- Animation ------- */
