@@ -148,3 +148,17 @@ Draggable.create(".characters", {
     }
     },
 })*/
+
+gsap.from('#window3', {
+    scrollTrigger:{
+        trigger:"#section5",
+        //markers: true,
+        start: 'top 80%',
+        end: 'top 20%',
+        toggleActions: 'play none reverse reset',
+        scrub: 1,
+    },
+    rotate: -90,
+    x: '-100vw',
+    duration: 2,
+})
