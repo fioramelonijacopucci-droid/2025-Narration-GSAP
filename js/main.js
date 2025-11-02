@@ -95,32 +95,21 @@ Draggable.create(".characters", {
     cursor: 'grab',
 
 
-    /** Je me suis aidé de CHAT gpt pour faire en sorte que le carré passe de rouge à vert */
-    onDragEnd: function(){
-    console.log('Je dépose');
-    const drop = document.getElementById("depositeZone");
 
-    const isOver = this.hitTest(drop,"20px");
-
-    if (isOver && this.target.id === "correct") {
-        gsap.to(drop, { backgroundColor: "green", duration: 0.25 });
-        
-    } 
-    else {
-        gsap.to(drop, { backgroundColor: "red", duration: 0.25})
-    }
-},
-})
-
-/*onDragEnd: function() {
+    onDragEnd: function() {
     console.log("Je dépose");
-    if (this.hitTest("#correct", 20px){
-      document.getElementById("depositeZone").style.background = "green";
+    if (this.hitTest("#correct", "20px" )){
+      document.getElementById("depositeZone").style.backgroundColor = "green";
     } else {
-      document.getElementById("depositeZone").style.background = "red";
+      document.getElementById("depositeZone").style.backgroundColor = "red";
     }
   }
-});*/
+
+
+    
+})
+
+
 
 
 
