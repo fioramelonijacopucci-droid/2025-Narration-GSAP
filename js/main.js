@@ -49,7 +49,7 @@ mm.add ({
 
 /** GSAP Animation - Section 3 Time line */
 
-
+/** inspiré du code de Julien */
 
 const sections = gsap.utils.toArray("#section3 > div");
 
