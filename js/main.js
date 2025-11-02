@@ -114,7 +114,7 @@ Draggable.create(".characters", {
 
 /*onDragEnd: function() {
     console.log("Je dépose");
-    if (this.hitTest("#depositeZone", 50%)){
+    if (this.hitTest("#correct", 20px){
       document.getElementById("depositeZone").style.background = "green";
     } else {
       document.getElementById("depositeZone").style.background = "red";
