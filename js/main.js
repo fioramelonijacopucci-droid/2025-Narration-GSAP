@@ -114,16 +114,10 @@ Draggable.create(".characters", {
 
 /*onDragEnd: function() {
     console.log("Je dépose");
-    const drop = document.getElementById("depositeZone");
-
-    // Option 1 : passer l'élément DOM à hitTest (clair et robuste)
-    const isOver = this.hitTest(drop, "50%");
-
-    // On vérifie aussi que l'élément glissé est bien celui qui a id="correct"
-    if (isOver && this.target.id === "correct") {
-      gsap.to(drop, { backgroundColor: "green", duration: 0.25 });
+    if (this.hitTest("#depositeZone", 20px)){
+      document.getElementById("depositeZone").style.background = "green";
     } else {
-      gsap.to(drop, { backgroundColor: "red", duration: 0.25 });
+      document.getElementById("depositeZone").style.background = "red";
     }
   }
 });*/
