@@ -1,7 +1,7 @@
 /** GSAP plugins */
 gsap.registerPlugin(ScrollTrigger, Observer, ScrollToPlugin, Draggable, MotionPathPlugin);
 
-/** GSAP Animation section1 bri */
+/** GSAP Animation section1 cait */
 gsap.to("#comete",{
     x: 200,
     rotate: 180,
@@ -25,6 +25,27 @@ gsap.from('#window2', {
 })
 
 
+/** Ce media match ne marche pas */
+
+let mm = gsap.matchMedia();
+
+mm.add ({
+    isMobile: "(max-width: 666px)",
+    isDesktop: "(min-width: 667px)",
+}, (context) => {
+    let { isMobile, isDesktop } = context.conditions;
+
+    gsap.to("#window2", {
+        scrollTrigger:{
+        start: 'top 80%',
+        end: 'top 20%',
+        rotate: isMobile ? -90 : 90,
+        x: '-100vw',
+        duration: 2,
+        toggleActions: 'play none reverse reset',
+        }
+    })
+})
 
 /** GSAP Animation - Section 3 Time line */
 
@@ -72,9 +93,40 @@ Draggable.create(".characters", {
     type: "x,y",
     bounds: "#section5",
     cursor: 'grab',
+
+
+    /** Je me suis aidé de CHAT gpt pour faire en sorte que le carré passe de rouge à vert */
+    onDragEnd: function(){
+    console.log('Je dépose');
+    const drop = document.getElementById("depositeZone");
+
+    const isOver = this.hitTest(drop,"50%");
+
+    if (isOver && this.target.id === "correct") {
+        gsap.to(drop, { backgroundColor: "green", duration: 0.25 });
+        
+    } 
+    else {
+        gsap.to(drop, { backgroundColor: "red", duration: 0.25})
+    }
+},
 })
 
+/*onDragEnd: function() {
+    console.log("Je dépose");
+    const drop = document.getElementById("depositeZone");
 
+    // Option 1 : passer l'élément DOM à hitTest (clair et robuste)
+    const isOver = this.hitTest(drop, "50%");
+
+    // On vérifie aussi que l'élément glissé est bien celui qui a id="correct"
+    if (isOver && this.target.id === "correct") {
+      gsap.to(drop, { backgroundColor: "green", duration: 0.25 });
+    } else {
+      gsap.to(drop, { backgroundColor: "red", duration: 0.25 });
+    }
+  }
+});*/
 
 
 

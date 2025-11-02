@@ -92,6 +92,8 @@ h2{
     justify-content: center;
 
     padding: 10px;
+
+    background-color: rgba(137, 43, 226, 0.5);
 }
 
 .textSec2{
@@ -151,79 +153,192 @@ h3{
 .cassandraSection{
     width: 100vw;
     height: 100vw;
-    background-color: aquamarine;
+    background-image: url(assets/image/Kiramman\ house\ arcane.jpeg);
+    background-size: cover;
     display: flex;
+    flex-direction: column;
 }
 
 .cassandra{
-    height: 100px;
-    width: 90px;
+    height: 250px;
+    width: 200px;
+    align-self: center;
+
+    padding: 10px;
 }
 
 .tobiasSection{
     width: 100vw;
     height: 100vw;
-    background-color: green;
+    background-image: url(assets/image/piltover.jpeg);
+    background-size: cover;
     display: flex;
+    flex-direction: column;
 }
 
 .tobias{
-    height: 100px;
-    width: 90px;
+    height: 250px;
+    width: 200px;
+    align-self: center;
+
+    padding: 10px;
 }
 
 .viSection{
     width: 100vw;
     height: 100vw;
-    background-color: red;
+    background-image: url(assets/image/VI\ \(Arcane\).jpeg);
+    background-size: cover;
     display: flex;
+    flex-direction: column;
 }
 
 .vi{
-    height: 100px;
-    width: 90px;
+    height: 250px;
+    width: 200px;
+    align-self: center;
+
+    padding: 10px;
+}
+
+.paragrapheDesc{
+    align-self: center;
+    background-color: aqua;
+    border-radius: 5px;
+    width: 50vw;
+    font-size: 40px;
+
+    padding: 10px;
 }
 
 .jayceSection{
     width: 100vw;
     height: 100vw;
-    background-color: yellow;
+    background-image: url(assets/image/jayceLab.jpeg);
+    background-size: cover;
     display: flex;
+    flex-direction: column;
 }
 
 .jayce{
-    height: 100px;
-    width: 90px;
+    height: 279px;
+    width: 200px;
+    align-self: center;
+
+    padding: 10px;
 }
 
-#section4{
+/*#section4{
     width: 100vw;
     min-height: 50vw;
     background-color: rgb(195, 148, 18);
-}
+}*/
 
 #section5{
     width: 100vw;
-    min-height: 50vw;
-    background-color: rgb(20, 57, 166);
+    min-height: 100vw;
+    background-image: url(assets/image/love.jpeg);
+    background-size: cover;
 
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+#section5__image{
+    display: flex;
+    align-items: center;
+}
+
 .characters{
     /*height: 100%;*/
-    width: 10%;
+    width: 20%;
+}
+
+#mel{
+    height: 85%;
+    width: 85%;
 }
 
 
 #depositeZone{
     width: 250px;
     height: 250px;
+    background-color: rgba(165, 42, 42, 0.5);
+    align-self: self-end;
+    margin: 10px;
 }
 /* ------- Responsive ------- */
 
 /* ------- Animation ------- */
 
 /* media queries*/
+@media (max-width:666px){
+
+h1, h2{
+    font-size: 25px;
+}
+
+p{
+    font-size: 30px;
+}
+
+
+/* Section 1 */
+
+#section1{
+    flex-direction: column;
+}
+
+#comete{
+    width: 100px;
+    height: 100px;
+}
+
+.imageG, .imageD{
+    width: 30%;
+    height: 25%;
+}
+
+/* Section 2 */
+
+.CaitIs{
+    width: 30%;
+    height: 25%;
+}
+
+.description{
+    font-size: 25px;
+}
+
+/* Section 3 */
+
+#section3{
+    flex-direction: column;
+    height: 80vw;
+    
+}
+
+.cassandra, .tobias, .vi, .jayce{
+    height: 150px;
+    width: 100px;
+}
+
+.paragrapheDesc{
+    font-size: 10px;
+}
+
+/* Section 5 */
+
+
+#mel{
+    width: 70%;
+    height: 70%;
+}
+
+#depositeZone{
+    width: 150px;
+    height: 150px;
+}
+
+}
