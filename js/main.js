@@ -100,7 +100,7 @@ Draggable.create(".characters", {
     console.log('Je dépose');
     const drop = document.getElementById("depositeZone");
 
-    const isOver = this.hitTest(drop,"50%");
+    const isOver = this.hitTest(drop,"20px");
 
     if (isOver && this.target.id === "correct") {
         gsap.to(drop, { backgroundColor: "green", duration: 0.25 });
@@ -114,7 +114,7 @@ Draggable.create(".characters", {
 
 /*onDragEnd: function() {
     console.log("Je dépose");
-    if (this.hitTest("#depositeZone", 20px)){
+    if (this.hitTest("#depositeZone", 50%)){
       document.getElementById("depositeZone").style.background = "green";
     } else {
       document.getElementById("depositeZone").style.background = "red";
